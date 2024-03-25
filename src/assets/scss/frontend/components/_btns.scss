@@ -1,0 +1,39 @@
+.nft_btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 60px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 20px;
+  background-color: #a259ff;
+
+  transition:
+    background-color 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
+
+  &:hover {
+    background-color: darken(#a259ff, 10);
+    box-shadow: 0px 16px 16px #{rgba(#a259ff, 0.3)};
+  }
+
+  &:active {
+    translate: 1px 1px;
+  }
+
+  &-nobg {
+    background-color: transparent;
+    border: 1px solid #a259ff;
+
+    svg path {
+      fill: #a259ff;
+      transition: all 0.3s ease-in-out;
+    }
+
+    &:hover {
+      svg path {
+        fill: #fff;
+      }
+    }
+  }
+}

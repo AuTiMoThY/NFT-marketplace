@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+/* *****************************************/
+/*    css
+/*    V 20240324
+/*        by AuOzzy
+/******************************************/
+@use 'sass:math';
+@import 'core';
+
+@import 'frontend/components/btns';
+@import 'frontend/components/nft_card';
+@import 'frontend/components/artist';
+@import 'frontend/components/artist_card';
+@import 'frontend/components/collection_card';
+@import 'frontend/components/page_section-headline';
+
+@import 'frontend/container';
+@import 'frontend/header';
+@import 'frontend/section_hero';
+@import 'frontend/section_trending';
+@import 'frontend/section_top_creators';

@@ -1,0 +1,19 @@
+@mixin media-down($breakpoint) {
+  @if is-number($breakpoint) {
+    $breakpoint: $breakpoint * 1px;
+    @media (max-width: $breakpoint) {
+      @content;
+    }
+  }
+}
+
+@mixin rwd-tablet() {
+  @include media-down(834) {
+    @content;
+  }
+}
+@mixin rwd-mobile() {
+  @include media-down(375) {
+    @content;
+  }
+}

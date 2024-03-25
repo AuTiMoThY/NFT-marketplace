@@ -1,0 +1,64 @@
+.page_section-hero {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  .container {
+    display: flex;
+    gap: 30px;
+  }
+
+  .txts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    flex: 1 1 50%;
+  }
+
+  .heading_group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 510px;
+
+    .title {
+      font-size: 67px;
+      font-weight: 600;
+      line-height: 73.7px;
+    }
+
+    .txt {
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 35.2px;
+    }
+  }
+
+  .nft_btn {
+    display: inline-flex;
+  }
+
+  .additional_info {
+    display: flex;
+    gap: 30px;
+    width: 100%;
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 set-flex-basis(30, 3);
+
+      .number {
+        font-family: 'Space Mono', monospace;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 39.2px;
+      }
+
+      .txt {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 38.38px;
+      }
+    }
+  }
+}

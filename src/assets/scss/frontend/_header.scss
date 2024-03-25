@@ -1,0 +1,41 @@
+.site_header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  @include rwd-tablet {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+    @include rwd-tablet {
+      padding-left: responsive-clamp(50, 30, 'px');
+      padding-right: responsive-clamp(50, 30, 'px');
+    }
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+.nav-list {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-item {
+  .link {
+    height: 46px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    &:hover {
+      color: #a259ff;
+    }
+  }
+}

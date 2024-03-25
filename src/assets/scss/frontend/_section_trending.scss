@@ -1,0 +1,26 @@
+.page_section-trending {
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  .heading {
+    @extend .font-H3;
+  }
+  .subhead {
+    @extend .font-Body;
+  }
+
+  .page_section-content {
+    display: flex;
+    gap: 30px;
+
+    .collection_card {
+      flex: 1 1 set-flex-basis(30, 3);
+    }
+  }
+}
