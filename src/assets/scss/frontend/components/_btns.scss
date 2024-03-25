@@ -12,6 +12,12 @@
     background-color 0.3s ease-in-out,
     box-shadow 0.3s ease-in-out;
 
+  .icon {
+    flex: 0 0 20px;
+    width: 20px;
+    height: 20px;
+  }
+
   &:hover {
     background-color: darken(#a259ff, 10);
     box-shadow: 0px 16px 16px #{rgba(#a259ff, 0.3)};

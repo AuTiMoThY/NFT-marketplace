@@ -1,0 +1,166 @@
+.site_footer {
+  background-color: #3b3b3b;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  color: #ccc;
+
+  .row-3-parts {
+    display: flex;
+    padding-left: calc((1050px - 990px) / 2);
+    padding-right: calc((1050px - 990px) / 2);
+
+    @include media-down(1280) {
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .info {
+      flex: 1 1 calc((330 / 990) * 100%);
+    }
+
+    .explore {
+      flex: 1 1 calc((240 / 990) * 100%);
+    }
+    .subscribe {
+      flex: 1 1 calc((420 / 990) * 100%);
+    }
+  }
+
+  .container {
+    @include media-down(1280) {
+      width: 100%;
+      padding-left: responsive-clamp(195, 72, 'px');
+      padding-right: responsive-clamp(195, 72, 'px');
+    }
+    @include rwd-tablet {
+      padding-left: responsive-clamp(72, 30, 'px');
+      padding-right: responsive-clamp(72, 30, 'px');
+    }
+  }
+
+  .explore,
+  .subscribe {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .logo {
+    width: 243px;
+    height: 32px;
+  }
+
+  .additional_info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 240px;
+  }
+
+  .community_info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    .icons {
+      display: flex;
+      gap: 10px;
+    }
+  }
+
+  .title {
+    @extend .font-H5-spaceMono;
+    color: #fff;
+  }
+
+  .explore-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .explore-item {
+    .link {
+      @include hover_effect(#a259ff);
+    }
+  }
+
+  .subscribe {
+    .txt {
+      max-width: 330px;
+    }
+  }
+
+  .subscribe-frm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .subscribe-field {
+    display: flex;
+    background-color: #fff;
+    border-radius: 20px;
+    // overflow: hidden;
+
+    @include media-down(576) {
+      flex-direction: column;
+      gap: 16px;
+
+      background-color: transparent;
+    }
+
+    &-input {
+      flex: 1 1 100%;
+      border-radius: 20px 0 0 20px;
+      padding: 20px 16px;
+      border: none;
+
+      @include media-down(576) {
+        border-radius: 20px;
+      }
+    }
+
+    &-btn {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      align-items: center;
+      flex: 1 0 180px;
+      border: none;
+      background-color: #a259ff;
+      border-radius: 20px;
+
+      color: #fff;
+
+      cursor: pointer;
+      transition:
+        background-color 0.3s ease-in-out,
+        box-shadow 0.3s ease-in-out;
+
+      &:hover {
+        background-color: darken(#a259ff, 10);
+        box-shadow: 0px 16px 16px #{rgba(#a259ff, 0.3)};
+      }
+
+      @include media-down(576) {
+        flex: 1 0 46px;
+      }
+    }
+  }
+  .copyright {
+    border-top: 1px solid #858584;
+    padding-top: 20px;
+    margin-top: 30px;
+
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 13.2px;
+  }
+}

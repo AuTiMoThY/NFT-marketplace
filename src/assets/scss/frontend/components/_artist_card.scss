@@ -1,5 +1,5 @@
 .artist_card {
-  position: relative;
+  // position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,14 +8,29 @@
   background-color: #3b3b3b;
   border-radius: 20px;
 
+  transition: all 0.3s ease-in-out;
+
+  @include media-down(1280) {
+    flex-direction: row;
+  }
+  &:hover {
+    box-shadow: 0 0 16px #{rgba(#a259ff, 0.3)};
+    img {
+      scale: 1.05;
+    }
+  }
+  img {
+    transition: all 0.3s ease-in-out;
+  }
   &:before {
   }
 
   &-avatar {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
+    @include circle(120);
     overflow: hidden;
+    @include media-down(1280) {
+      @include circle(60);
+    }
   }
 
   &-info {
@@ -24,12 +39,24 @@
     gap: 5px;
     align-items: center;
 
+    @include media-down(1280) {
+      align-items: flex-start;
+    }
+
     > .name {
       @extend .font-H5;
     }
 
-    .small {
+    .total {
+      display: flex;
+      gap: 10px;
+    }
+
+    .label {
       color: #858584;
+    }
+    .number {
+      @extend .font-Body-spaceMono;
     }
   }
 }

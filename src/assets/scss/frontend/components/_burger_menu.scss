@@ -1,0 +1,7 @@
+.burger_menu {
+  display: none;
+
+  @include media-down(1280) {
+    display: block;
+  }
+}

@@ -21,17 +21,25 @@ img {
 }
 
 .font-H3 {
-  font-size: 38px;
   font-weight: 600;
-  line-height: 45.6px;
+  @include set_fz_lh(38, 1.2);
 }
 .font-H5 {
-  font-size: 22px;
   font-weight: 600;
-  line-height: 30.8px;
+  @include set_fz_lh(22, 1.4);
 }
 .font-Body {
-  font-size: 22px;
   font-weight: 400;
-  line-height: 35.2px;
+  @include set_fz_lh(22, 1.6);
+}
+
+.font-H5-spaceMono {
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  @include set_fz_lh(22, 1.6);
+}
+.font-Body-spaceMono {
+  font-family: 'Space Mono', monospace;
+  font-weight: 400;
+  @include set_fz_lh(16, 1.4);
 }

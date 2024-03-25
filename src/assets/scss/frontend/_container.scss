@@ -4,4 +4,15 @@
   // padding-right: 195px;
   margin-left: auto;
   margin-right: auto;
+
+  @include media-down(1280) {
+    width: 100%;
+    padding-left: responsive-clamp(115, 72, 'px');
+    padding-right: responsive-clamp(115, 72, 'px');
+  }
+
+  @include rwd-tablet {
+    padding-left: responsive-clamp(72, 30, 'px');
+    padding-right: responsive-clamp(72, 30, 'px');
+  }
 }

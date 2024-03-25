@@ -1,5 +1,6 @@
 <script setup>
 import Header from './page/header.vue';
+import Footer from './page/footer.vue';
 import HeroSection from './page/HeroSection.vue';
 import TrendingSection from './page/TrendingSection.vue';
 import TopCreatorsSection from './page/TopCreatorsSection.vue';
@@ -15,4 +16,6 @@ import TopCreatorsSection from './page/TopCreatorsSection.vue';
         <TrendingSection></TrendingSection>
         <TopCreatorsSection></TopCreatorsSection>
     </main>
+
+    <Footer></Footer>
 </template>

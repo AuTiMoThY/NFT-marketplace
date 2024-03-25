@@ -2,4 +2,23 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+
+  .txts_group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .heading {
+    @extend .font-H3;
+    @include media-down(1280) {
+      @include set_fz_lh_clamp(38, 1.2, 28, 1.4);
+    }
+  }
+  .subhead {
+    @extend .font-Body;
+    @include media-down(1280) {
+      @include set_fz_lh_clamp(22, 1.6, 16, 1.4);
+    }
+  }
 }

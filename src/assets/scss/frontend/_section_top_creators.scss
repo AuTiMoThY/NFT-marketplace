@@ -1,11 +1,24 @@
 .page_section-top_creators {
   padding-top: 80px;
   padding-bottom: 80px;
+  @include rwd-tablet {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 
   .container {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 60px;
+
+    @include media-down(1280) {
+      gap: 40px;
+    }
+
+    @include rwd-tablet {
+      padding-bottom: 100px;
+    }
   }
 
   .page_section-headline {
@@ -15,11 +28,12 @@
     align-items: flex-end;
   }
 
-  .heading {
-    @extend .font-H3;
-  }
-  .subhead {
-    @extend .font-Body;
+  .nft_btn {
+    @include rwd-tablet {
+      @include absolute($B: 0);
+      width: calc(100% - (#{responsive-clamp(72, 30, 'px')}) * 2);
+      justify-content: center;
+    }
   }
 }
 
@@ -27,8 +41,46 @@
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+
+  counter-reset: decimal-counter;
+
+  @include media-down(1280) {
+  }
 }
 
 .artist-item {
+  position: relative;
   flex: 1 1 set-flex-basis(30, 4);
+
+  @include media-down(1280) {
+    flex: 1 1 set-flex-basis(30, 2);
+  }
+
+  @include rwd-tablet {
+    flex: 1 1 set-flex-basis(30, 1);
+  }
+
+  counter-increment: decimal-counter;
+
+  &::before {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    content: counter(decimal-counter);
+
+    position: absolute;
+    top: 20px;
+    left: 20px;
+
+    @include circle(30);
+    background-color: #2b2b2b;
+    color: #858584;
+
+    @extend .font-Body-spaceMono;
+
+    @include media-down(1280) {
+      top: 10px;
+      left: 10px;
+    }
+  }
 }

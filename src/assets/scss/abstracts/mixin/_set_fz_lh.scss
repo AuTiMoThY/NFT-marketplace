@@ -1,0 +1,8 @@
+@mixin set_fz_lh($fz1, $lh1) {
+  font-size: #{$fz1}px;
+  line-height: #{$fz1 * $lh1}px;
+}
+@mixin set_fz_lh_clamp($fz1, $lh1, $fz2, $lh2) {
+  font-size: responsive-clamp($fz1, $fz2, 'px');
+  line-height: responsive-clamp($fz1 * $lh1, $fz2 * $lh2, 'px');
+}

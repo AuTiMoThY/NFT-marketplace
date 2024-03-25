@@ -55,10 +55,7 @@
           background-color: #a259ff;
           border-radius: 20px;
 
-          font-family: 'Space Mono', monospace;
-          font-weight: 700;
-          font-size: 22px;
-          line-height: 35.2px;
+          @extend .font-H5-spaceMono;
 
           transition: all 0.3s ease-in-out;
           &:hover {

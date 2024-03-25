@@ -1,6 +1,10 @@
 .page_section-trending {
   padding-top: 80px;
   padding-bottom: 80px;
+  @include rwd-tablet {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 
   .container {
     display: flex;
@@ -8,19 +12,28 @@
     gap: 60px;
   }
 
-  .heading {
-    @extend .font-H3;
-  }
-  .subhead {
-    @extend .font-Body;
-  }
-
   .page_section-content {
     display: flex;
     gap: 30px;
 
+    @include media-down(1280) {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+    }
+
+    @include rwd-tablet {
+    }
+
     .collection_card {
       flex: 1 1 set-flex-basis(30, 3);
+
+      @include media-down(1280) {
+        flex: 0 0 set-flex-basis(30, 2);
+      }
+
+      @include media-down(576) {
+        flex: 0 0 set-flex-basis(30, 1);
+      }
     }
   }
 }

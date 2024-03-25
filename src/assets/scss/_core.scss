@@ -1,6 +1,14 @@
+@import 'abstracts/variable/easing';
+
 @import 'abstracts/functions/responsive-clamp';
 @import 'abstracts/functions/set-flex-basis';
 @import 'abstracts/mixin/media';
+@import 'abstracts/mixin/circle';
+@import 'abstracts/mixin/wh';
+@import 'abstracts/mixin/position';
+@import 'abstracts/mixin/psudoClass';
+@import 'abstracts/mixin/hover_effect';
+@import 'abstracts/mixin/set_fz_lh';
 
 @import 'frontend/base/reset';
 @import 'frontend/base/common';

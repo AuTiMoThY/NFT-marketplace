@@ -12,7 +12,7 @@
     width: 100%;
     padding-left: 50px;
     padding-right: 50px;
-    @include rwd-tablet {
+    @include media-down(1280) {
       padding-left: responsive-clamp(50, 30, 'px');
       padding-right: responsive-clamp(50, 30, 'px');
     }
@@ -22,10 +22,44 @@
 .nav {
   display: flex;
   align-items: center;
+
+  @include media-down(1280) {
+    flex-direction: column;
+    justify-content: space-between;
+    @include fixed(0, -70vw);
+    z-index: 99;
+    width: 70vw;
+    height: 100vh;
+    padding: 30px;
+    box-shadow: 0 0 32px #{rgba(#000, 0.3)};
+
+    background-color: #2b2b2b;
+
+    transition: all 0.3s ease-in-out;
+
+    .js-open-mobile-menu & {
+      right: 0;
+    }
+  }
+}
+
+.nav-close {
+  display: none;
+
+  @include media-down(1280) {
+    display: block;
+    @include absolute(30px, 30px);
+  }
 }
 .nav-list {
   display: flex;
   gap: 10px;
+
+  @include media-down(1280) {
+    flex-direction: column;
+    gap: 60px;
+    padding-top: 60px;
+  }
 }
 
 .nav-item {
@@ -37,5 +71,13 @@
     &:hover {
       color: #a259ff;
     }
+  }
+}
+
+.nav-quick {
+  @include media-down(1280) {
+    flex-direction: column;
+    gap: 60px;
+    padding-top: 60px;
   }
 }
